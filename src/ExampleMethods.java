@@ -1,7 +1,17 @@
+import java.util.Scanner;
+
 public class ExampleMethods {
 
-    public static void hello(String argName) {
-        System.out.println("Hello " + argName);
+    public static void hello() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Put your name");
+        String name = sc.nextLine();
+
+        hello(name);
+    }
+
+    public static void hello(String name) {
+        System.out.println("Hello " + name);
     }
 
     public static int sum(int a, int b) {
@@ -28,7 +38,7 @@ public class ExampleMethods {
     }
 
     public static void main(String[] args) {
-        hello("Agent 007");
+        hello();
 
         int sumOfIntegers = sum(10, 5);
         float sumOfFloat = sum(10.5f, 5.5f);
